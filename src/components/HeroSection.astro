@@ -1,12 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import ebookImages from "../images/svg/ebook-images.svg";
-import logo from "../images/svg/logo.svg";
-import lightbulb from "../images/svg/lightbulb.svg";
 import bookOpen from "../images/svg/book-open.svg";
+import ebookImages from "../images/svg/ebook-images.svg";
+import lightbulb from "../images/svg/lightbulb.svg";
 import linkSimple from "../images/svg/link-simple.svg";
-
-import Layout from "../layouts/Layout.astro";
 ---
 
 <section id="hero">
@@ -63,11 +60,11 @@ import Layout from "../layouts/Layout.astro";
 
       div.text {
         span {
-          text-transform: uppercase;
+          color: $white;
         }
 
         h1 {
-          margin: 1.5rem 0;
+          margin-top: 1.5rem;
         }
 
         p {

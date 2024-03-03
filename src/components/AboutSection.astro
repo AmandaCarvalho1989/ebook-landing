@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import tablet from "../images/svg/tablet.svg";
+import check from "../images/svg/check.svg";
+import Button from "../components/Button.astro";
+---
+
+<section id="about">
+  <div class="content">
+    <Image src={tablet} alt="Tablet" />
+    <div class="text">
+      <span>THE BOOK</span>
+      <h2>About the book</h2>
+
+      <p>
+        In this book, we will explore the art and science of landing page
+        design. We will delve into the key <br /> elements that make up an effective
+        landing page, including copywriting, layout, design, and user
+        experience.
+      </p>
+
+      <ul>
+        <li>
+          <Image src={check} alt="Check" />
+          Ideal for those who are starting now or want to reinforce their knowledge
+          in UI;
+        </li>
+        <li>
+          <Image src={check} alt="Check" />Contains 8 chapters for you to read,
+          learn and practice;
+        </li>
+        <li>
+          <Image src={check} alt="Check" />40 tips with examples to avoid
+          interface errors.
+        </li>
+      </ul>
+      <Button>Buy the ebook</Button>
+      <Button variant="text">Read a preview</Button>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  div.content {
+    display: flex;
+    gap: 17rem;
+    justify-content: space-between;
+  }
+
+  div.text {
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+      gap: 1rem;
+
+      li{
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+    }
+
+    button:first-of-type{
+      margin-right: 2rem;
+    }
+  }
+</style>

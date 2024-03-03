@@ -3,7 +3,7 @@
 @import "@fontsource-variable/cormorant";
 @import "@fontsource-variable/raleway";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,17 +14,14 @@ html {
   color: $gray-09;
   font-family: "Cormorant", sans-serif;
   font-size: 1rem;
-  
 
-  body{
-    width: 100vw;
+  body {
+    max-width: 100vw;
   }
 
-  
   section {
     padding: 8.25rem 13rem;
   }
-
 
   h1,
   h2 {
@@ -37,26 +34,32 @@ html {
 
   h2 {
     font-size: 3rem;
+    margin: 1.5rem 0 2rem 0;
   }
 
-  p{
+  p {
     line-height: 2rem;
   }
 
-  span{
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.125rem;
-    color: $white;
+  ul {
+    list-style: none;
   }
 
-  button{
+  span {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
     padding: 1rem 3.5rem;
-    height: 3.5rem ;
+    height: 3.5rem;
     width: auto;
     outline: none;
     border: none;
     border-radius: 0.25rem;
-    font-size:1.125rem;
+    font-size: 1.125rem;
     font-weight: 500;
   }
 }

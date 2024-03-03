@@ -1,0 +1,21 @@
+---
+const { variant } = Astro.props;
+const variantClass = variant === "text" ? "text" : "primary";
+---
+
+<button class={`button-${variantClass}`}><slot /></button>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+
+  .button-primary {
+    background-color: $purple-dark;
+    color: $gray-01;
+  }
+
+  .button-text {
+    color: $purple-dark;
+    background-color: transparent;
+  }
+</style>

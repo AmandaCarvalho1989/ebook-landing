@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import { chapters } from "../constants/chapters";
+---
+
+<section id="content">
+  <div>
+    <span>THE CONTENT</span>
+    <h2>What’s inside of it?</h2>
+    <div class="chapters">
+      {
+        chapters.map((chapter, index) => (
+          <div class="chapter">
+            <div class="icon-container">
+              <Image src={chapter.icon} alt={chapter.title} />
+            </div>
+            <h4>
+              {index + 1}. {chapter.title}
+            </h4>
+            <p> {chapter.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  section#content {
+    display: flex;
+    gap: 17rem;
+    justify-content: space-between;
+    background-color: $background-light-2;
+  }
+
+  div.text {
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+      gap: 1rem;
+
+      li {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+    }
+
+    button:first-of-type {
+      margin-right: 2rem;
+    }
+  }
+
+  div.chapters {
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    grid-row-gap: 4.5rem;
+
+    div.chapter {
+      width: fit-content;
+
+      h4 {
+        margin: 1rem 0;
+        font-size: 1.125rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
+
+      div.icon-container {
+        width: 4rem;
+        height: 4rem;
+        background-color: $background-light;
+        border: 0.163rem solid $purple-dark;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
