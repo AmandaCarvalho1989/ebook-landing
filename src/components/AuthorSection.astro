@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import author from "../images/author-1.png";
+import Button from "./Button.astro";
+---
+
+<section id="author">
+  <div class="content">
+    <Image src={author} alt="Author" width='510' />
+    <div class="text">
+      <span>THE AUTHOR</span>
+      <h2>Who wrote this ?</h2>
+      <p>
+        Throughout her career, Sophia has been passionate about sharing his
+        knowledge and expertise with others. Inspired by the feedback and
+        questions she received, she decided to write a lot of comprehensive
+        e-books about design.
+      </p>
+      <p>
+        Sophia Rodriguez is a highly experienced graphic designer with over 15
+        years of experience in the field. She started her career working for a
+        small design agency before branching out on his own and founding her own
+        design firm.
+      </p>
+
+      <Button>Buy the ebook</Button>
+      <Button variant="text">See other books</Button>
+
+      <hr />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  div.content {
+    display: flex;
+    gap: 17rem;
+    justify-content: space-between;
+  }
+
+</style>
