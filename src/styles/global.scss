@@ -1,0 +1,62 @@
+@import "../styles/variables.scss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/cormorant";
+@import "@fontsource-variable/raleway";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: $white;
+  color: $gray-09;
+  font-family: "Cormorant", sans-serif;
+  font-size: 1rem;
+  
+
+  body{
+    width: 100vw;
+  }
+
+  
+  section {
+    padding: 8.25rem 13rem;
+  }
+
+
+  h1,
+  h2 {
+    font-family: "Inter", sans-serif;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p{
+    line-height: 2rem;
+  }
+
+  span{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.125rem;
+    color: $white;
+  }
+
+  button{
+    padding: 1rem 3.5rem;
+    height: 3.5rem ;
+    width: auto;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    font-size:1.125rem;
+    font-weight: 500;
+  }
+}

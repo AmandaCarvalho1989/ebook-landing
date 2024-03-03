@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import ebookImages from "../images/svg/ebook-images.svg";
+import logo from "../images/svg/logo.svg";
+import lightbulb from "../images/svg/lightbulb.svg";
+import bookOpen from "../images/svg/book-open.svg";
+import linkSimple from "../images/svg/link-simple.svg";
+
+import Layout from "../layouts/Layout.astro";
+---
+
+<section id="hero">
+  <div class="content">
+    <div class="text">
+      <span>CHECK IT OUT</span>
+      <h1>Best eBook design <br /> that you ever seen</h1>
+      <p>
+        A landing page is the first impression your potential customers have
+        of your brand, <br />and it can make or break your conversion rates.
+        But don't worry - our ebook has got <br /> you covered.
+      </p>
+      <button> Buy the ebook</button>
+
+      <hr />
+
+      <div class="info">
+        <div class="info-item">
+          <Image src={lightbulb} alt="Tips" width="28" />
+          <p><strong> +80 </strong>practice tips</p>
+        </div>
+        <div class="info-item">
+          <Image src={bookOpen} alt="Pages" width="28" />
+          <p><strong> +154 </strong> pages</p>
+        </div>
+        <div class="info-item">
+          <Image src={linkSimple} alt="Links" width="28" />
+          <p><strong>+50 </strong>useful links</p>
+        </div>
+      </div>
+    </div>
+    <Image
+      id="ebook-images"
+      src={ebookImages}
+      alt="E-book images"
+      width="960"
+    />
+  </div>
+</section>
+
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  section#hero {
+    width: 100%;
+    height: 54rem;
+    background-color: $purple-dark;
+    color: $white;
+    padding-right: 0rem;
+
+    div.content {
+      display: flex;
+
+      div.text {
+        span {
+          text-transform: uppercase;
+        }
+
+        h1 {
+          margin: 1.5rem 0;
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        button {
+          background-color: $white;
+          color: $purple-dark;
+        }
+
+        hr {
+          margin-top: 6rem;
+          margin-bottom: 2rem;
+          height: 0.010rem;
+          background-color: $purple-light;
+					border: none;
+        }
+
+        div.info {
+          display: flex;
+          gap: 6rem;
+
+          div.info-item {
+            display: flex;
+            gap: 0.5rem;
+            color: $background-light;
+
+						strong{
+							color: $purple-light;
+						}
+          }
+        }
+      }
+    }
+
+    img#ebook-images {
+      position: absolute;
+      right: 0;
+      top: 8rem;
+      margin: auto;
+    }
+  }
+</style>

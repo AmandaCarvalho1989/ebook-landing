@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.4.6"
+    "@fontsource-variable/cormorant": "^5.0.9",
+    "@fontsource-variable/inter": "^5.0.16",
+    "@fontsource-variable/raleway": "^5.0.17",
+    "astro": "^4.4.6",
+    "sass": "^1.71.1"
   }
 }
