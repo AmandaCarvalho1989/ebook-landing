@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import starFilled from "../images/svg/star-filled.svg";
+import starOutlined from "../images/svg/star-outlined.svg";
+
+const { feedback } = Astro.props;
+
+const ratingStars = Array.from(
+  { length: 5 },
+  (_, index) => index < feedback.rating
+);
+
+---
+
+<div class="feedback">
+  <div class="feedback-header flex">
+    <Image src={feedback.image} alt={feedback.name} />
+    <div>
+      <h4>{feedback.name}</h4>
+      <p>{feedback.profession}</p>
+    </div>
+  </div>
+  <p>{feedback.description}</p>
+  <div class="feedback-footer flex">
+    <div class="rate">
+      {
+        ratingStars.map((star) => {
+          if (star) return <Image src={starFilled} alt="Star filled" />;
+          return <Image src={starOutlined} alt="Star oulined" />;
+        })
+      }
+    </div>
+    <p>{feedback.date}</p>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  div.feedback {
+    height: 18.5rem;
+    width: 27rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border: 1px solid $gray-05;
+    border-radius: 0.25rem;
+
+    > p {
+      padding: 1.5rem 0;
+    }
+
+    div.feedback-footer {
+      justify-content: space-between;
+
+      p{
+        color: $gray-08;
+      }
+    }
+  }
+</style>

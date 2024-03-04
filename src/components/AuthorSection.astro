@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import author from "../images/author-1.png";
+import author2 from "../images/author-2.png";
 import Button from "./Button.astro";
 ---
 
 <section id="author">
   <div class="wrapper">
-    <Image src={author} alt="Author" width='510' />
+    <Image src={author} alt="Author" height="614" />
     <div class="text">
       <span>THE AUTHOR</span>
       <h2>Who wrote this ?</h2>
@@ -23,10 +24,20 @@ import Button from "./Button.astro";
         design firm.
       </p>
 
-      <Button>Buy the ebook</Button>
-      <Button variant="text">See other books</Button>
+      <div class="flex buttons">
+        <Button>Buy the ebook</Button>
+        <Button variant="text">See other books</Button>
+      </div>
 
       <hr />
+
+      <div class="author-info">
+        <Image src={author2} alt="Author Image 2" />
+        <div>
+          <h4>Sophia Rodriguez</h4>
+          <p>Author, Editor, Reviewer & Owner</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -35,6 +46,20 @@ import Button from "./Button.astro";
   div.wrapper {
     gap: 17rem;
     justify-content: space-between;
+
+    hr {
+      margin-top: 2.625rem;
+    }
+
+    div.buttons {
+      margin-top: 3rem;
+    }
   }
 
+  div.author-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 </style>

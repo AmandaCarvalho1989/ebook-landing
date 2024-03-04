@@ -67,9 +67,24 @@ html {
     font-weight: 500;
   }
 
+  hr {
+   
+    margin-bottom: 2rem;
+    height: 0.010rem;
+    background-color: $purple-light;
+    border: none;
+  }
+
+
   div.wrapper{
-    max-width: 1600px;
+    max-width: 1500px;
     width: 100%;
     display: flex;
+  }
+
+  div.flex{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 }

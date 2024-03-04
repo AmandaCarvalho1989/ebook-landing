@@ -1,0 +1,41 @@
+---
+import FeedbackCard from "./FeedbackCard.astro";
+import { feedbacks } from "../constants/feedbacks";
+---
+
+<section id="feedbacks">
+  <div class="wrapper">
+    <div class="text">
+      <span>THE PEOPLE</span>
+      <h2>Who’s this book for?</h2>
+
+      <p>
+        A book about landing page can be interesting for a wide range of
+        individuals, including: digital <br /> marketers, web designers, copywriters
+        and anyone who is interested in learning about it from scratch.
+      </p>
+
+      <div class="feedbacks-container">
+        {feedbacks.map((feedback) => <FeedbackCard feedback={feedback} />)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  section#feedbacks {
+    background-color: $background-light-2;
+
+    div.text{
+      width: 100%;
+    }
+  }
+
+  div.feedbacks-container {
+    display: flex;
+    padding-top: 6rem;
+    justify-content: space-between;
+  }
+</style>
