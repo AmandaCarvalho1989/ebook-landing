@@ -10,6 +10,7 @@
 }
 
 html {
+  font-size: 62.5%;
   background: $white;
   color: $gray-09;
   font-family: "Cormorant", sans-serif;
@@ -20,11 +21,11 @@ html {
   }
 
   section {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding:8.25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8.25rem 0;
   }
 
   h1,
@@ -68,25 +69,24 @@ html {
   }
 
   hr {
-   
     margin-bottom: 2rem;
-    height: 0.010rem;
+    height: 0.01rem;
     background-color: $purple-light;
     border: none;
   }
 
-  input{
+  input {
     outline: none;
     border: none;
   }
 
-  div.wrapper{
+  div.wrapper {
     max-width: 1500px;
     width: 100%;
     display: flex;
   }
 
-  div.flex{
+  div.flex {
     display: flex;
     gap: 1rem;
     align-items: center;

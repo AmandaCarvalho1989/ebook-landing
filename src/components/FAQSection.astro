@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import { questions } from "../constants/questions";
+import plusIcon from "../images/svg/plus.svg";
+import Button from "./Button.astro";
+import Questions from "./Questions.astro";
+---
+
+<section id="cta">
+  <div class="wrapper">
+    <div class="text">
+      <span>FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>
+        Do you still have any questions or suggestions? <br /> Send us a message.
+      </p>
+      <Button>Send message</Button>
+    </div>
+    <Questions />
+  </div>
+</section>
+
+<style lang="scss">
+  div.wrapper {
+    justify-content: space-between;
+  }
+
+  div.text {
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  
+</style>

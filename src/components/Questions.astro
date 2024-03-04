@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import { questions } from "../constants/questions";
+import plusIcon from "../images/svg/plus.svg";
+import minusIcon from "../images/svg/target.svg";
+
+const faqQuestions = questions.map((question, index) => ({
+  ...question,
+  opened: index === 0,
+}));
+
+let openedQuestionIndex = 0;
+
+function toggleQuestion(index: number): any {
+  // Toggle the opened state of the clicked question
+  faqQuestions[index].opened = !faqQuestions[index].opened;
+
+  // Close the previously opened question
+  if (index !== openedQuestionIndex) {
+    faqQuestions[openedQuestionIndex].opened = false;
+    openedQuestionIndex = index;
+  }
+}
+---
+
+<div class="questions">
+  {
+    faqQuestions.map((item, index) => (
+      <div class="question">
+        <div class="question-header">
+          <h4>{item.question} </h4>
+          <span  onclick={toggleQuestion(index)}> 
+          {item.opened ? (
+            <Image
+              src={plusIcon}
+              alt="Open answer"
+              width="24"
+             
+            />
+          ) : (
+            <Image src={minusIcon} alt="Close answer" width="24"  />
+          )}
+        </span>
+        </div>
+        {item.opened && <p>{item.answer}</p>}
+      </div>
+    ))
+  }
+</div>
+<script></script>
+
+<style lang="scss">
+  div.questions {
+    width: 56rem;
+  }
+
+  div.question {
+    div.question-header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+</style>
