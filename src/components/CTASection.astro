@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import Button from "./Button.astro";
+
+
+import person4 from "../images/person-4.png";
+import person5 from "../images/person-5.png";
+import person6 from "../images/person-6.png";
+import pagesContent from "../images/pages-content.png";
+
+---
+
+<section id="cta">
+  <div class="wrapper">
+    <div class="text">
+      <span>BUY IT NOW!</span>
+      <h2>More about the book</h2>
+      <p>
+        In this book, we will explore the art and science of landing page
+        design. We will delve into the <br /> key elements that make up an effective
+        landing page, including copywriting, layout, design, and <br /> user experience.
+      </p>
+      <div class="flex buttons">
+        <Button>Buy the ebook</Button>
+        <Button variant="text">See other books</Button>
+      </div>
+
+      <hr />
+
+      <div class="feedbacks-group flex">
+        <div class="flex">
+          <Image src={person4} alt="Person"/>
+          <Image src={person5} alt="Person"/>
+          <Image src={person6} alt="Person"/>
+        </div>
+        <p>+ 190 great feedbacks about our job</p>
+      </div>
+    </div>
+    <Image src={pagesContent} alt="Ebook Samples"/>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  hr {
+    margin-top: 3.5rem;
+  }
+
+  div.wrapper{
+    justify-content: space-between;
+  }
+
+  div.flex{
+    justify-content: flex-start;
+    gap: 0;
+  }
+</style>

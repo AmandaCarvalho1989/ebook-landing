@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import ebookSamples from "../images/ebook-samples.png";
+---
+
+<section id="preview">
+  <div class="wrapper">
+    <Image src={ebookSamples} alt="Ebook Samples" />
+    <div class="text">
+      <span>READ FOR FREE</span>
+      <h2>Get a free preview</h2>
+      <p>
+        Are you looking for your next great read? Look no further than the
+        preview of this <br /> book, it will give you a tantalizing taste of what's
+        to come in this captivating tale.
+      </p>
+      <form>
+        <div class="flex input-container">
+          <input type="text" />
+          <button>Get preview</button>
+        </div>
+        <div class="flex">
+          <input type="checkbox" id="news"  placeholder="Type your best e-mail to receive a preview..."/>
+          <label for="news">I agree to receive news</label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <style lang="scss">
+    @import "../styles/variables.scss";
+
+    hr {
+      margin-top: 3.5rem;
+    }
+
+    div.wrapper {
+      justify-content: space-between;
+      background-color: $purple-dark;
+      padding: 0 8rem;
+      height: 42.5rem;
+      align-items: center;
+    }
+
+    div.text {
+      color: $white;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        
+        input[type='text']{
+          background-color: $white;
+          width: 27.5rem;
+          height: 3.375rem;
+          border-radius: 0.35rem 0 0 0.35rem;
+          padding: 0 1rem;
+        }
+
+        button{
+          background-color: $background-light;
+          color: $purple-dark;
+          border-radius:  0 0.35rem  0.35rem 0;
+          height: 3.375rem;
+        }
+
+        
+        div.input-container{
+          padding: 3rem 0 2.5rem 0;
+          gap: 0;
+        }
+      }
+    }
+
+    div.flex {
+      justify-content: flex-start;
+    }
+  </style>
+</section>

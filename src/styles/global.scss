@@ -75,6 +75,10 @@ html {
     border: none;
   }
 
+  input{
+    outline: none;
+    border: none;
+  }
 
   div.wrapper{
     max-width: 1500px;
@@ -86,5 +90,9 @@ html {
     display: flex;
     gap: 1rem;
     align-items: center;
+  }
+
+  div.buttons {
+    margin-top: 3rem;
   }
 }
