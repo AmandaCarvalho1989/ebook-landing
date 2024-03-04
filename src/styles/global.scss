@@ -20,7 +20,11 @@ html {
   }
 
   section {
-    padding: 8.25rem 13rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding:8.25rem 0;
   }
 
   h1,
@@ -61,5 +65,11 @@ html {
     border-radius: 0.25rem;
     font-size: 1.125rem;
     font-weight: 500;
+  }
+
+  div.wrapper{
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
   }
 }

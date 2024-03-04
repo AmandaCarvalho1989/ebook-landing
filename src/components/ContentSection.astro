@@ -4,7 +4,7 @@ import { chapters } from "../constants/chapters";
 ---
 
 <section id="content">
-  <div>
+  <div class="wrapper">
     <span>THE CONTENT</span>
     <h2>What’s inside of it?</h2>
     <div class="chapters">
@@ -33,6 +33,10 @@ import { chapters } from "../constants/chapters";
     gap: 17rem;
     justify-content: space-between;
     background-color: $background-light-2;
+
+    div.wrapper{
+      flex-direction: column;
+    }
   }
 
   div.text {

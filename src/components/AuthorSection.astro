@@ -5,7 +5,7 @@ import Button from "./Button.astro";
 ---
 
 <section id="author">
-  <div class="content">
+  <div class="wrapper">
     <Image src={author} alt="Author" width='510' />
     <div class="text">
       <span>THE AUTHOR</span>
@@ -32,8 +32,7 @@ import Button from "./Button.astro";
 </section>
 
 <style lang="scss">
-  div.content {
-    display: flex;
+  div.wrapper {
     gap: 17rem;
     justify-content: space-between;
   }
