@@ -25,7 +25,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 8.25rem 0;
+    padding: 6rem 0;
   }
 
   h1,
@@ -34,16 +34,16 @@ html {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 2.625rem;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1.5rem 0 2rem 0;
   }
 
   p {
-    line-height: 2rem;
+    line-height: 24px;
   }
 
   ul {
@@ -52,9 +52,8 @@ html {
 
   span {
     font-family: "Raleway", sans-serif;
-    font-size: 1.125rem;
+    font-size:0.875rem;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
   }
 
   button {
@@ -64,7 +63,7 @@ html {
     outline: none;
     border: none;
     border-radius: 0.25rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 500;
 
     &:hover{
@@ -90,6 +89,10 @@ html {
     max-width: 1500px;
     width: 100%;
     display: flex;
+
+    @media only screen and (max-width: 1400px) {
+      max-width: 80%;
+    }
   }
 
   div.flex {

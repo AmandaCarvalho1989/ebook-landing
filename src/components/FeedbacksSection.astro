@@ -5,19 +5,17 @@ import { feedbacks } from "../constants/feedbacks";
 
 <section id="feedbacks">
   <div class="wrapper">
-    <div class="text">
-      <span>THE PEOPLE</span>
-      <h2>Who’s this book for?</h2>
+    <span>THE PEOPLE</span>
+    <h2>Who’s this book for?</h2>
 
-      <p>
-        A book about landing page can be interesting for a wide range of
-        individuals, including: digital <br /> marketers, web designers, copywriters
-        and anyone who is interested in learning about it from scratch.
-      </p>
+    <p>
+      A book about landing page can be interesting for a wide range of
+      individuals, including: digital <br /> marketers, web designers, copywriters
+      and anyone who is interested in learning about it from scratch.
+    </p>
 
-      <div class="feedbacks-container">
-        {feedbacks.map((feedback) => <FeedbackCard feedback={feedback} />)}
-      </div>
+    <div class="feedbacks-container">
+      {feedbacks.map((feedback) => <FeedbackCard feedback={feedback} />)}
     </div>
   </div>
 </section>
@@ -28,14 +26,15 @@ import { feedbacks } from "../constants/feedbacks";
   section#feedbacks {
     background-color: $background-light-2;
 
-    div.text{
-      width: 100%;
+    div.wrapper {
+      flex-direction: column;
     }
   }
 
   div.feedbacks-container {
     display: flex;
-    padding-top: 6rem;
-    justify-content: space-between;
+    padding-top: 3rem;
+    width: 100%;
+    gap: 1rem;
   }
 </style>

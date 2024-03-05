@@ -10,7 +10,7 @@ import Questions from "./Questions.astro";
   <div class="wrapper">
     <div class="text">
       <span>FAQ</span>
-      <h2>Frequently Asked Questions</h2>
+      <h2>Frequently Asked <br />Questions</h2>
       <p>
         Do you still have any questions or suggestions? <br /> Send us a message.
       </p>
@@ -26,10 +26,11 @@ import Questions from "./Questions.astro";
   }
 
   div.text {
+    flex: 1;
+    flex-direction: column;
+
     p {
       margin-bottom: 2rem;
     }
   }
-
-  
 </style>

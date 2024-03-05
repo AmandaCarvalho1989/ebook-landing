@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 
 <section id="about">
   <div class="wrapper">
-    <Image loading="lazy" src={tablet} alt="Tablet" />
+    <Image loading="lazy" src={tablet} alt="Tablet" id='tablet' />
     <div class="text">
       <span>THE BOOK</span>
       <h2>About the book</h2>
@@ -66,4 +66,8 @@ import Button from "./Button.astro";
       margin-right: 2rem;
     }
   }
+
+  img#tablet {
+      width:30%;
+    }
 </style>

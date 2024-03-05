@@ -36,7 +36,7 @@ import pagesContent from "../images/pages-content.png";
         <p>+ 190 great feedbacks about our job</p>
       </div>
     </div>
-    <Image loading="lazy" src={pagesContent} alt="Ebook Samples"/>
+    <Image id='pages' loading="lazy" src={pagesContent} alt="Pages contents" />
   </div>
 </section>
 
@@ -49,6 +49,12 @@ import pagesContent from "../images/pages-content.png";
 
   div.wrapper{
     justify-content: space-between;
+    gap: 2rem;
+
+     img#pages{
+      width: 50%;
+      height: 50%;
+    }
   }
 
   div.flex{

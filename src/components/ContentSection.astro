@@ -12,7 +12,7 @@ import { chapters } from "../constants/chapters";
         chapters.map((chapter, index) => (
           <div class="chapter">
             <div class="icon-container">
-              <Image loading="lazy" src={chapter.icon} alt={chapter.title} />
+              <Image loading="lazy" src={chapter.icon} alt={chapter.title} width={24} />
             </div>
             <h4>
               {index + 1}. {chapter.title}
@@ -60,18 +60,19 @@ import { chapters } from "../constants/chapters";
   }
 
   div.chapters {
-    margin-top: 4.5rem;
+    width: 100%;
+    margin-top: 2.625rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     grid-row-gap: 4.5rem;
 
     div.chapter {
-      width: fit-content;
+      width: 100%;
 
       h4 {
         margin: 1rem 0;
-        font-size: 1.125rem;
+        font-size: 1rem;
       }
 
       p {
@@ -79,8 +80,9 @@ import { chapters } from "../constants/chapters";
       }
 
       div.icon-container {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 1.5rem;
         background-color: $background-light;
         border: 0.163rem solid $purple-dark;
         border-radius: 0.25rem;

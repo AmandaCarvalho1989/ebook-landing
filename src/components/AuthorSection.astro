@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 
 <section id="author">
   <div class="wrapper">
-    <Image loading="lazy" src={author} alt="Author" height="614" />
+    <Image loading="lazy" src={author} alt="Author" id="author-1" />
     <div class="text">
       <span>THE AUTHOR</span>
       <h2>Who wrote this ?</h2>
@@ -45,7 +45,6 @@ import Button from "./Button.astro";
 
 <style lang="scss">
   div.wrapper {
-    gap: 17rem;
     justify-content: space-between;
 
     hr {
@@ -53,10 +52,21 @@ import Button from "./Button.astro";
     }
   }
 
+  div.text{
+    max-width: 34.5rem;
+  }
+
   div.author-info {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  img#author-1 {
+    width: 400px;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 4px;
   }
 </style>

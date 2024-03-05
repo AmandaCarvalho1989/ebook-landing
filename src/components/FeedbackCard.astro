@@ -9,24 +9,39 @@ const ratingStars = Array.from(
   { length: 5 },
   (_, index) => index < feedback.rating
 );
-
 ---
 
 <div class="feedback">
   <div class="feedback-header flex">
-    <Image loading="lazy" src={feedback.image} alt={feedback.name} />
+    <Image loading="lazy" src={feedback.image} alt={feedback.name} width={48} />
     <div>
       <h4>{feedback.name}</h4>
       <p>{feedback.profession}</p>
     </div>
   </div>
-  <p>{feedback.description}</p>
+  <p>"{feedback.description}"</p>
   <div class="feedback-footer flex">
     <div class="rate">
       {
         ratingStars.map((star) => {
-          if (star) return <Image loading="lazy" src={starFilled} alt="Star filled" />;
-          return <Image loading="lazy" src={starOutlined} alt="Star oulined" />;
+          if (star) {
+            return (
+              <Image
+                loading="lazy"
+                src={starFilled}
+                alt="Star filled"
+                width={18}
+              />
+            );
+          }
+          return (
+            <Image
+              loading="lazy"
+              src={starOutlined}
+              alt="Star oulined"
+              width={18}
+            />
+          );
         })
       }
     </div>
@@ -38,9 +53,9 @@ const ratingStars = Array.from(
   @import "../styles/variables.scss";
 
   div.feedback {
-    height: 18.5rem;
-    width: 27rem;
-    padding: 1.5rem;
+    height: 14rem;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     background-color: $white;
@@ -48,14 +63,16 @@ const ratingStars = Array.from(
     border-radius: 0.25rem;
 
     > p {
-      padding: 1.5rem 0;
+      padding: 1rem 0;
+      font-size: 0.75rem;
     }
 
     div.feedback-footer {
       justify-content: space-between;
 
-      p{
+      p {
         color: $gray-08;
+        font-size: 0.75rem;
       }
     }
   }

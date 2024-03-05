@@ -13,7 +13,8 @@ import minusIcon from "../images/svg/target.svg";
           <div class="question-header">
             <h4>{item.question} </h4>
             <button id="toggle-question" data-question={index}>
-              <Image loading="lazy"
+              <Image
+                loading="lazy"
                 id="question-icon"
                 class={`question-icon-${index}`}
                 src={plusIcon}
@@ -32,14 +33,14 @@ import minusIcon from "../images/svg/target.svg";
 <script>
   const toggleAnswer = (index) => {
     const answer = document.getElementById(`answer-${index}`);
-    
+
     if (answer.style.display === "none") {
       answer.style.display = "block";
     } else {
       answer.style.display = "none";
     }
-  }
-  
+  };
+
   document.querySelectorAll("#toggle-question").forEach((element, index) => {
     element.addEventListener("click", () => {
       toggleAnswer(index);
@@ -49,28 +50,27 @@ import minusIcon from "../images/svg/target.svg";
 
 <style lang="scss">
   div.questions {
-    width: 56rem;
-  }
-
-  button {
-    padding: 0;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-  div.question {
-    margin-bottom: 1.5rem;
-    div.question-header {
-      display: flex;
-      justify-content: space-between;
+    max-width: 40rem;
+    button {
+      padding: 0;
+      width: auto;
+      height: auto;
+      background-color: transparent;
     }
+    div.question {
+      margin-bottom: 1.5rem;
+      div.question-header {
+        display: flex;
+        justify-content: space-between;
+      }
 
-    p {
-      transition: 0.5s ease-in-out;
-    }
-    &:not(:first-child) p {
-      display: none;
-      transition: 0.5s ease-in-out;
+      p {
+        transition: 0.5s ease-in-out;
+      }
+      &:not(:first-child) p {
+        display: none;
+        transition: 0.5s ease-in-out;
+      }
     }
   }
 </style>
