@@ -3,61 +3,74 @@ import { Image } from "astro:assets";
 import { questions } from "../constants/questions";
 import plusIcon from "../images/svg/plus.svg";
 import minusIcon from "../images/svg/target.svg";
-
-const faqQuestions = questions.map((question, index) => ({
-  ...question,
-  opened: index === 0,
-}));
-
-let openedQuestionIndex = 0;
-
-function toggleQuestion(index: number): any {
-  // Toggle the opened state of the clicked question
-  faqQuestions[index].opened = !faqQuestions[index].opened;
-
-  // Close the previously opened question
-  if (index !== openedQuestionIndex) {
-    faqQuestions[openedQuestionIndex].opened = false;
-    openedQuestionIndex = index;
-  }
-}
 ---
 
 <div class="questions">
   {
-    faqQuestions.map((item, index) => (
-      <div class="question">
-        <div class="question-header">
-          <h4>{item.question} </h4>
-          <span  onclick={toggleQuestion(index)}> 
-          {item.opened ? (
-            <Image
-              src={plusIcon}
-              alt="Open answer"
-              width="24"
-             
-            />
-          ) : (
-            <Image src={minusIcon} alt="Close answer" width="24"  />
-          )}
-        </span>
+    questions.map((item, index) => {
+      return (
+        <div class="question">
+          <div class="question-header">
+            <h4>{item.question} </h4>
+            <button id="toggle-question" data-question={index}>
+              <Image
+                id="question-icon"
+                class={`question-icon-${index}`}
+                src={plusIcon}
+                alt="Open answer"
+                width="24"
+              />
+            </button>
+          </div>
+          <p id={`answer-${index}`}>{item.answer}</p>
         </div>
-        {item.opened && <p>{item.answer}</p>}
-      </div>
-    ))
+      );
+    })
   }
 </div>
-<script></script>
+
+<script>
+  const toggleAnswer = (index) => {
+    const answer = document.getElementById(`answer-${index}`);
+    
+    if (answer.style.display === "none") {
+      answer.style.display = "block";
+    } else {
+      answer.style.display = "none";
+    }
+  }
+  
+  document.querySelectorAll("#toggle-question").forEach((element, index) => {
+    element.addEventListener("click", () => {
+      toggleAnswer(index);
+    });
+  });
+</script>
 
 <style lang="scss">
   div.questions {
     width: 56rem;
   }
 
+  button {
+    padding: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
   div.question {
+    margin-bottom: 1.5rem;
     div.question-header {
       display: flex;
       justify-content: space-between;
+    }
+
+    p {
+      transition: 0.5s ease-in-out;
+    }
+    &:not(:first-child) p {
+      display: none;
+      transition: 0.5s ease-in-out;
     }
   }
 </style>
