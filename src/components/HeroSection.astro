@@ -22,20 +22,20 @@ import linkSimple from "../images/svg/link-simple.svg";
 
       <div class="info">
         <div class="info-item">
-          <Image src={lightbulb} alt="Tips" width="28" />
+          <Image loading="lazy" src={lightbulb} alt="Tips" width="28" />
           <p><strong> +80 </strong>practice tips</p>
         </div>
         <div class="info-item">
-          <Image src={bookOpen} alt="Pages" width="28" />
+          <Image loading="lazy" src={bookOpen} alt="Pages" width="28" />
           <p><strong> +154 </strong> pages</p>
         </div>
         <div class="info-item">
-          <Image src={linkSimple} alt="Links" width="28" />
+          <Image loading="lazy" src={linkSimple} alt="Links" width="28" />
           <p><strong>+50 </strong>useful links</p>
         </div>
       </div>
     </div>
-    <Image
+    <Image loading="eager"
       id="ebook-images"
       src={ebookImages}
       alt="E-book images"

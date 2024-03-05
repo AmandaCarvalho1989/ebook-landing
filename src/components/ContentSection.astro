@@ -12,7 +12,7 @@ import { chapters } from "../constants/chapters";
         chapters.map((chapter, index) => (
           <div class="chapter">
             <div class="icon-container">
-              <Image src={chapter.icon} alt={chapter.title} />
+              <Image loading="lazy" src={chapter.icon} alt={chapter.title} />
             </div>
             <h4>
               {index + 1}. {chapter.title}

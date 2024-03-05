@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 
 <section id="about">
   <div class="wrapper">
-    <Image src={tablet} alt="Tablet" />
+    <Image loading="lazy" src={tablet} alt="Tablet" />
     <div class="text">
       <span>THE BOOK</span>
       <h2>About the book</h2>
@@ -21,16 +21,16 @@ import Button from "./Button.astro";
 
       <ul>
         <li>
-          <Image src={check} alt="Check" />
+          <Image loading="lazy" src={check} alt="Check" />
           Ideal for those who are starting now or want to reinforce their knowledge
           in UI;
         </li>
         <li>
-          <Image src={check} alt="Check" />Contains 8 chapters for you to read,
+          <Image loading="lazy" src={check} alt="Check" />Contains 8 chapters for you to read,
           learn and practice;
         </li>
         <li>
-          <Image src={check} alt="Check" />40 tips with examples to avoid
+          <Image loading="lazy" src={check} alt="Check" />40 tips with examples to avoid
           interface errors.
         </li>
       </ul>

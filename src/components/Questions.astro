@@ -13,7 +13,7 @@ import minusIcon from "../images/svg/target.svg";
           <div class="question-header">
             <h4>{item.question} </h4>
             <button id="toggle-question" data-question={index}>
-              <Image
+              <Image loading="lazy"
                 id="question-icon"
                 class={`question-icon-${index}`}
                 src={plusIcon}

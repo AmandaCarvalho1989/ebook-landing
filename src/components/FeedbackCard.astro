@@ -14,7 +14,7 @@ const ratingStars = Array.from(
 
 <div class="feedback">
   <div class="feedback-header flex">
-    <Image src={feedback.image} alt={feedback.name} />
+    <Image loading="lazy" src={feedback.image} alt={feedback.name} />
     <div>
       <h4>{feedback.name}</h4>
       <p>{feedback.profession}</p>
@@ -25,8 +25,8 @@ const ratingStars = Array.from(
     <div class="rate">
       {
         ratingStars.map((star) => {
-          if (star) return <Image src={starFilled} alt="Star filled" />;
-          return <Image src={starOutlined} alt="Star oulined" />;
+          if (star) return <Image loading="lazy" src={starFilled} alt="Star filled" />;
+          return <Image loading="lazy" src={starOutlined} alt="Star oulined" />;
         })
       }
     </div>
