@@ -16,7 +16,9 @@ import Questions from "./Questions.astro";
       </p>
       <Button>Send message</Button>
     </div>
-    <Questions />
+    <div class="questions-list">
+      <Questions />
+    </div>
   </div>
 </section>
 
@@ -26,11 +28,14 @@ import Questions from "./Questions.astro";
   }
 
   div.text {
-    flex: 1;
+    flex: 2;
     flex-direction: column;
 
     p {
       margin-bottom: 2rem;
     }
+  }
+  div.questions-list{
+    flex: 2.5;
   }
 </style>

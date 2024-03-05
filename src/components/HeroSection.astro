@@ -12,9 +12,9 @@ import linkSimple from "../images/svg/link-simple.svg";
       <span>CHECK IT OUT</span>
       <h1>Best eBook design <br /> that you ever seen</h1>
       <p>
-        A landing page is the first impression your potential customers have
-        of your brand, <br />and it can make or break your conversion rates.
-        But don't worry - our ebook has got <br /> you covered.
+        A landing page is the first impression your potential customers have of
+        your brand, and it can make or break your conversion rates. But don't
+        worry - our ebook has got you covered.
       </p>
       <button> Buy the ebook</button>
 
@@ -22,27 +22,29 @@ import linkSimple from "../images/svg/link-simple.svg";
 
       <div class="info">
         <div class="info-item">
-          <Image loading="lazy" src={lightbulb} alt="Tips" width="28" />
-          <p><strong> +80 </strong>practice tips</p>
+          <Image loading="eager" src={lightbulb} alt="Tips" width="28" />
+          <p><strong> +80</strong>practice tips</p>
         </div>
         <div class="info-item">
-          <Image loading="lazy" src={bookOpen} alt="Pages" width="28" />
-          <p><strong> +154 </strong> pages</p>
+          <Image loading="eager" src={bookOpen} alt="Pages" width="28" />
+          <p><strong> +154</strong> pages</p>
         </div>
         <div class="info-item">
-          <Image loading="lazy" src={linkSimple} alt="Links" width="28" />
-          <p><strong>+50 </strong>useful links</p>
+          <Image loading="eager" src={linkSimple} alt="Links" width="28" />
+          <p><strong>+50</strong>useful links</p>
         </div>
       </div>
     </div>
-    <Image loading="eager"
-      id="ebook-images"
-      src={ebookImages}
-      alt="E-book images"
-    />
+    <div class="book-cover">
+      <Image
+        loading="eager"
+        id="ebook-images"
+        src={ebookImages}
+        alt="E-book images"
+      />
+    </div>
   </div>
 </section>
-
 
 <style lang="scss">
   @import "../styles/variables.scss";
@@ -53,51 +55,59 @@ import linkSimple from "../images/svg/link-simple.svg";
     color: $white;
     padding-right: 0rem;
 
+    div.text {
+      flex: 1;
+      max-width: 40rem;
+      span {
+        color: $white;
+      }
 
-      div.text {
-        span {
-          color: $white;
-        }
+      h1 {
+        margin: 1.5rem 0 1.5rem 0;
+      }
 
-        h1 {
-          margin-top: 1.5rem;
-        }
+      p {
+        margin-bottom: 2rem;
+      }
 
-        p {
-          margin-bottom: 2rem;
-        }
+      button {
+        background-color: $white;
+        color: $purple-dark;
+      }
 
-        button {
-          background-color: $white;
-          color: $purple-dark;
-        }
+      hr {
+        margin-top: 3rem;
+      }
 
-        hr {
-          margin-top: 6rem;
-        }
+      div.info {
+        display: flex;
+        justify-content: space-between;
 
-        div.info {
+        div.info-item {
           display: flex;
-          gap: 6rem;
+          gap: 0.5rem;
+          color: $background-light;
 
-          div.info-item {
-            display: flex;
-            gap: 0.5rem;
-            color: $background-light;
-
-						strong{
-							color: $purple-light;
-						}
+          strong {
+            color: $purple-light;
           }
+        }
       }
     }
 
-    img#ebook-images {
-      position: absolute;
-      right: 0;
-      top: 8rem;
-      margin: auto;
-      width: calc(100vh - 60px);
+    div.book-cover {
+      flex: 1;
+
+      img#ebook-images {
+        position: absolute;
+        right: 0;
+        top: 3rem;
+        width: 35%;
+
+        @media only screen and (max-width: 1400px) {
+          width: 45%;
+        }
+      }
     }
   }
 </style>
