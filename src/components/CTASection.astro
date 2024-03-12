@@ -1,13 +1,11 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Button from "./Button.astro";
-
 
 import person4 from "../images/person-4.png";
 import person5 from "../images/person-5.png";
 import person6 from "../images/person-6.png";
-import pagesContent from "../images/pages-content.png";
-
+import pagesContent from "../images/svg/pages-example.svg";
 ---
 
 <section id="cta">
@@ -28,15 +26,30 @@ import pagesContent from "../images/pages-content.png";
       <hr />
 
       <div class="feedbacks-group flex">
-        <div class="flex">
-          <Image loading="lazy" src={person4} alt="Person"/>
-          <Image loading="lazy" src={person5} alt="Person"/>
-          <Image loading="lazy" src={person6} alt="Person"/>
+        <div class="feedback-images">
+          <Image
+            loading="lazy"
+            src={person4}
+            alt="Person"
+            class="feedback-image"
+          />
+          <Image
+            loading="lazy"
+            src={person5}
+            alt="Person"
+            class="feedback-image"
+          />
+          <Image
+            loading="lazy"
+            src={person6}
+            alt="Person"
+            class="feedback-image"
+          />
         </div>
         <p>+ 190 great feedbacks about our job</p>
       </div>
     </div>
-    <Image id='pages' loading="lazy" src={pagesContent} alt="Pages contents" />
+    <Image id="pages" loading="lazy" src={pagesContent} alt="Pages contents" />
   </div>
 </section>
 
@@ -47,18 +60,21 @@ import pagesContent from "../images/pages-content.png";
     margin-top: 3.5rem;
   }
 
-  div.wrapper{
+  div.wrapper {
+    gap: 8rem;
     justify-content: space-between;
-    gap: 2rem;
 
-     img#pages{
-      width: 50%;
-      height: 50%;
+    img#pages {
+      width: 40%;
+      height: inherit;
+      object-fit: contain;
     }
-  }
 
-  div.flex{
-    justify-content: flex-start;
-    gap: 0;
+    div.feedback-images {
+      
+      img:not(:first-child) {
+        margin-left: -1rem;
+      }
+    }
   }
 </style>
