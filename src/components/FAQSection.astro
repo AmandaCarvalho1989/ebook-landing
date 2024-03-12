@@ -25,6 +25,11 @@ import Questions from "./Questions.astro";
 <style lang="scss">
   div.wrapper {
     gap: 8rem;
+
+    @media only screen and (max-width: 900px) {
+     flex-direction: column;
+     gap: 4rem ;
+    }
   }
 
   div.text {

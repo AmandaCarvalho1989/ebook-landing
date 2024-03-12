@@ -12,7 +12,12 @@ import { chapters } from "../constants/chapters";
         chapters.map((chapter, index) => (
           <div class="chapter">
             <div class="icon-container">
-              <Image loading="lazy" src={chapter.icon} alt={chapter.title} width={24} />
+              <Image
+                loading="lazy"
+                src={chapter.icon}
+                alt={chapter.title}
+                width={24}
+              />
             </div>
             <h4>
               {index + 1}. {chapter.title}
@@ -34,7 +39,7 @@ import { chapters } from "../constants/chapters";
     justify-content: space-between;
     background-color: $background-light-2;
 
-    div.wrapper{
+    div.wrapper {
       flex-direction: column;
     }
   }
@@ -91,10 +96,8 @@ import { chapters } from "../constants/chapters";
         align-items: center;
       }
     }
-  }
 
-  @media (max-width: 768px) {
-    .grid-container {
+    @media (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }

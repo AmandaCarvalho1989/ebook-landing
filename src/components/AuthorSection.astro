@@ -58,7 +58,7 @@ import Button from "./Button.astro";
     justify-content: flex-start;
     gap: 1rem;
 
-    img{
+    img {
       width: 4rem;
       height: 4rem;
     }
@@ -69,5 +69,8 @@ import Button from "./Button.astro";
     height: inherit;
     object-fit: cover;
     border-radius: 4px;
+    @media only screen and (max-width: 900px) {
+      display: none;
+    }
   }
 </style>

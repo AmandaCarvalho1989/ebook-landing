@@ -7,13 +7,13 @@ import Button from "./Button.astro";
 
 <section id="about">
   <div class="wrapper">
-    <Image loading="lazy" src={tablet} alt="Tablet" id='tablet' />
+    <Image loading="lazy" src={tablet} alt="Tablet" id="tablet" />
     <div class="text">
       <span>THE BOOK</span>
       <h2>About the book</h2>
       <p>
         In this book, we will explore the art and science of landing page
-        design. We will delve into the key  elements that make up an effective
+        design. We will delve into the key elements that make up an effective
         landing page, including copywriting, layout, design, and user
         experience.
       </p>
@@ -24,12 +24,12 @@ import Button from "./Button.astro";
           in UI;
         </li>
         <li>
-          <Image loading="lazy" src={check} alt="Check" />Contains 8 chapters for you to read,
-          learn and practice;
+          <Image loading="lazy" src={check} alt="Check" />Contains 8 chapters
+          for you to read, learn and practice;
         </li>
         <li>
-          <Image loading="lazy" src={check} alt="Check" />40 tips with examples to avoid
-          interface errors.
+          <Image loading="lazy" src={check} alt="Check" />40 tips with examples
+          to avoid interface errors.
         </li>
       </ul>
       <Button>Buy the ebook</Button>
@@ -44,7 +44,6 @@ import Button from "./Button.astro";
   }
 
   div.text {
-   
     ul {
       display: flex;
       flex-direction: column;
@@ -52,7 +51,7 @@ import Button from "./Button.astro";
       margin-bottom: 3rem;
       gap: 1rem;
 
-      li{
+      li {
         display: flex;
         gap: 0.5rem;
         align-items: center;
@@ -60,13 +59,17 @@ import Button from "./Button.astro";
       }
     }
 
-    button:first-of-type{
+    button:first-of-type {
       margin-right: 2rem;
     }
   }
 
   img#tablet {
-      width:25rem;
-      height: inherit;
+    width: 25rem;
+    height: inherit;
+
+    @media only screen and (max-width: 900px) {
+      display: none;
     }
+  }
 </style>
