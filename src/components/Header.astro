@@ -8,12 +8,12 @@ import logo from "../images/svg/logo.svg";
     <Image loading="eager" src={logo} alt="Logo" />
     <ul>
       <li><a href="/#">About</a></li>
-    <li><a href="/#">Content</a></li>
-    <li><a href="/#">Author</a></li>
-    <li><a href="/#">Testimonials</a></li>
-    <li><a href="/#">FAQ</a></li>
-  </ul>
-</div>
+      <li><a href="/#">Content</a></li>
+      <li><a href="/#">Author</a></li>
+      <li><a href="/#">Testimonials</a></li>
+      <li><a href="/#">FAQ</a></li>
+    </ul>
+  </div>
 </header>
 
 <style lang="scss">
@@ -24,7 +24,7 @@ import logo from "../images/svg/logo.svg";
     height: 2rem;
     display: flex;
     justify-content: center;
-     padding-top: 3.5rem;
+    padding-top: 3.5rem;
     background-color: $purple-dark;
 
     ul {
@@ -42,7 +42,17 @@ import logo from "../images/svg/logo.svg";
     }
   }
 
-  div.wrapper{
+  div.wrapper {
     justify-content: space-between;
+  }
+  @media only screen and (max-width: 900px) {
+    div.wrapper {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    ul{
+      gap: 1rem !important;
+    }
   }
 </style>
