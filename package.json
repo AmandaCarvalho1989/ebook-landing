@@ -14,6 +14,10 @@
     "@fontsource-variable/inter": "^5.0.16",
     "@fontsource-variable/raleway": "^5.0.17",
     "astro": "^4.4.6",
-    "sass": "^1.71.1"
+    "sass": "^1.71.1",
+    "scrollreveal": "^4.0.9"
+  },
+  "devDependencies": {
+    "@types/scrollreveal": "^0.0.11"
   }
 }
