@@ -5,16 +5,16 @@ import logo from "../images/svg/logo.svg";
 
 <header>
   <div class="wrapper">
-    <Image loading="eager" src={logo} alt="Logo" />
+    <Image loading="eager" src={logo} alt="Logo" width={172} />
     <nav>
-    <ul>
-      <li><a href="/#">About</a></li>
-      <li><a href="/#">Content</a></li>
-      <li><a href="/#">Author</a></li>
-      <li><a href="/#">Testimonials</a></li>
-      <li><a href="/#">FAQ</a></li>
-    </ul>
-  </nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#author">Author</a></li>
+        <li><a href="#feedbacks">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -26,32 +26,38 @@ import logo from "../images/svg/logo.svg";
     height: 2rem;
     display: flex;
     justify-content: center;
-    padding-top: 3.5rem;
+    padding: 1.5rem 0;
     background-color: $purple-dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    align-items: center;
 
     nav ul {
       display: flex;
       gap: 2rem;
 
-     li{
+      li {
+        a {
+          color: $white;
+          text-decoration: none;
+          font-size: 0.875rem;
+          cursor: pointer;
 
-    
-      a {
-        color: $white;
-        text-decoration: none;
-        font-size: 0.875rem;
-        cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
-    }
     }
   }
 
   div.wrapper {
     justify-content: space-between;
+    align-items: center;
   }
   @media only screen and (max-width: 900px) {
     div.wrapper {
@@ -59,7 +65,7 @@ import logo from "../images/svg/logo.svg";
       gap: 2rem;
     }
 
-    ul{
+    ul {
       gap: 1rem !important;
     }
   }

@@ -26,6 +26,7 @@ html {
     align-items: center;
     flex-direction: column;
     padding: 6rem 0;
+    transition: all 0.5s ease-in-out;
   }
 
   h1,
@@ -89,8 +90,9 @@ html {
     max-width: 1440px;
     width: 100%;
     display: flex;
+    height: inherit;
 
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: 1440px) {
       max-width: 80%;
     }
   }
