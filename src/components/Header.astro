@@ -6,6 +6,7 @@ import logo from "../images/svg/logo.svg";
 <header>
   <div class="wrapper">
     <Image loading="eager" src={logo} alt="Logo" />
+    <nav>
     <ul>
       <li><a href="/#">About</a></li>
       <li><a href="/#">Content</a></li>
@@ -13,6 +14,7 @@ import logo from "../images/svg/logo.svg";
       <li><a href="/#">Testimonials</a></li>
       <li><a href="/#">FAQ</a></li>
     </ul>
+  </nav>
   </div>
 </header>
 
@@ -27,19 +29,24 @@ import logo from "../images/svg/logo.svg";
     padding-top: 3.5rem;
     background-color: $purple-dark;
 
-    ul {
+    nav ul {
       display: flex;
       gap: 2rem;
 
+     li{
+
+    
       a {
         color: $white;
         text-decoration: none;
         font-size: 0.875rem;
+        cursor: pointer;
 
         &:hover {
           text-decoration: underline;
         }
       }
+    }
     }
   }
 

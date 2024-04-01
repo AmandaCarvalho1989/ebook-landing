@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { questions } from "../constants/questions";
 import plusIcon from "../images/svg/plus.svg";
-import minusIcon from "../images/svg/target.svg";
+import minusIcon from "../images/svg/minus.svg";
 ---
 
 <div class="questions">
@@ -12,12 +12,12 @@ import minusIcon from "../images/svg/target.svg";
         <div class="question">
           <div class="question-header">
             <h4>{item.question} </h4>
-            <button id="toggle-question" data-question={index}>
+            <button id="toggle-question">
               <Image
                 loading="lazy"
                 id="question-icon"
                 class={`question-icon-${index}`}
-                src={plusIcon}
+                src={index === 0 ? minusIcon : plusIcon}
                 alt="Open answer"
                 width="24"
               />
@@ -31,13 +31,23 @@ import minusIcon from "../images/svg/target.svg";
 </div>
 
 <script>
+  // @ts-nocheck
   const toggleAnswer = (index) => {
-    const answer = document.getElementById(`answer-${index}`);
+    const plusIcon = new URL("../images/svg/plus.svg", import.meta.url)
+      .pathname;
+    const minusIcon = new URL("../images/svg/minus.svg", import.meta.url)
+      .pathname;
 
-    if (answer.style.display === "none") {
-      answer.style.display = "block";
+    const answer = document.getElementById(`answer-${index}`);
+    const icon = document.querySelector(`.question-icon-${index}`);
+
+   
+    if (icon.src.includes('plus')) {
+      icon.src = minusIcon;
+      answer.style.maxHeight = answer.scrollHeight + "px";
     } else {
-      answer.style.display = "none";
+      icon.src = plusIcon;
+      answer.style.maxHeight = "0px"; 
     }
   };
 
@@ -46,6 +56,14 @@ import minusIcon from "../images/svg/target.svg";
       toggleAnswer(index);
     });
   });
+
+  window.onload = () => {
+    const firstAnswer = document.getElementById('answer-0');
+    if (firstAnswer) {
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+    }
+  };
+
 </script>
 
 <style lang="scss">
@@ -65,12 +83,19 @@ import minusIcon from "../images/svg/target.svg";
         justify-content: space-between;
       }
 
-      p {
+      img#question-icon {
         transition: 0.5s ease-in-out;
       }
+
+      p {
+        transition: max-height 0.5s ease-in-out;
+        max-height: auto; 
+        overflow: hidden;
+      }
       &:not(:first-child) p {
-        display: none;
-        transition: 0.5s ease-in-out;
+        overflow: hidden;
+        max-height: 0px; 
+        transition: max-height 0.5s ease-in-out;
       }
     }
   }
