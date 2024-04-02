@@ -2,7 +2,8 @@
 
 ## 💻 Project 
 
-This project was done for study, as the conclusion work of the webprocess course. I did both the layout (UI) and the code (development).
+This project was done for study, as the conclusion work of the [WebProcess](https://webprocess.me/) course. I did both the layout (UI) and the code (development).
+
 I was able to exercise my creativity and practice the entire interface creation process, from collecting references, wireframe, prototype to website development using the Astro framework.
 
 
