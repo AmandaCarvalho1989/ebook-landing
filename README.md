@@ -1,54 +1,45 @@
-# Astro Starter Kit: Basics
+<h1 align="center">
+    <img src="https://app-andrejr.s3.amazonaws.com/2763ef838dcf41c70277-GoRestaurantMobile.png" width="100%" />
+</h1>
+     
+   <p align="center">
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=5965E0&labelColor=121214" alt="License">
 
-```sh
-npm create astro@latest -- --template basics
-```
+  <img src="https://img.shields.io/github/stars/amandacarvalho1989/ebook-landing?label=stars&message=MIT&color=5965E0&labelColor=121214" alt="Stars">
+  
+   <img src="https://img.shields.io/github/forks/amandacarvalho1989/ebook-landing?label=forks&message=MIT&color=5965E0&labelColor=121214" alt="Forks"> 
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 💻 Project 
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+This project was done for study, as the conclusion work of the webprocess course. I did both the layout (UI) and the code (development).
+I was able to exercise my creativity and practice the entire interface creation process, from collecting references, wireframe, prototype to website development using the Astro framework.
 
-## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🧬 Technologies
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+This project was developed using the following technologies:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- [Astro](https://astro.build/)
+- [Sass](https://sass-lang.com/)
+- [ScrollReveal](https://scrollrevealjs.org/)
+- [FontSource](https://fontsource.org/)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🎨 Layout 
 
-## 🧞 Commands
+You can view the project layout through the links below:
 
-All commands are run from the root of the project, from a terminal:
+- [Layout ](https://www.figma.com/file/cHzfYrUBgdzp1XrRuUpggk/GoRestaurant-Mobile?node-id=0%3A1)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Remembering that you need to have a Figma account to access it.
 
-## 👀 Want to learn more?
+## 📝 License
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/AmandaCarvalho1989/jobs-calc/blob/main/LICENSE.md) file for details
+
+
+
+
+
