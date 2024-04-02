@@ -20,13 +20,12 @@ This project was developed using the following technologies:
 
 You can view the project layout through the links below:
 
-- [Layout ](https://www.figma.com/file/DCVhyYttAGBqBPer8Cmim0/EBook---Desafio-WebProcess?type=design&node-id=0%3A1&mode=design&t=EkbTyHdACCsAVrcN-1)
+- [Behance](https://www.behance.net/gallery/168960167/Landing-Ebook)
 
-Remembering that you need to have a Figma account to access it.
 
 ## 📝 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/AmandaCarvalho1989/jobs-calc/blob/main/LICENSE.md) file for details
+This project is licensed under the MIT License. See the [LICENSE]() file for details
 
 
 
