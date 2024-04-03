@@ -19,9 +19,9 @@ import { chapters } from "../constants/chapters";
                 width={24}
               />
             </div>
-            <h4>
+            <strong>
               {index + 1}. {chapter.title}
-            </h4>
+            </strong>
             <p> {chapter.description}</p>
           </div>
         ))
@@ -75,9 +75,9 @@ import { chapters } from "../constants/chapters";
     div.chapter {
       width: 100%;
 
-      h4 {
-        margin: 1rem 0;
-        font-size: 1rem;
+      strong {
+        display: block;
+        margin: 1rem 0 !important;
       }
 
       p {

@@ -11,8 +11,8 @@ import minusIcon from "../images/svg/minus.svg";
       return (
         <div class="question">
           <div class="question-header">
-            <h4>{item.question} </h4>
-            <button id="toggle-question">
+            <strong>{item.question} </strong>
+            <button class="toggle-question">
               <Image
                 loading="lazy"
                 id="question-icon"
@@ -51,7 +51,7 @@ import minusIcon from "../images/svg/minus.svg";
     }
   };
 
-  document.querySelectorAll("#toggle-question").forEach((element, index) => {
+  document.querySelectorAll(".toggle-question").forEach((element, index) => {
     element.addEventListener("click", () => {
       toggleAnswer(index);
     });
