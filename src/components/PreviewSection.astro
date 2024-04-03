@@ -16,7 +16,7 @@ import ebookSamples from "../images/svg/ebook-samples.svg";
       </p>
       <form>
         <div class="flex input-container">
-          <input type="text" />
+          <input type="text"   aria-label="email"  aria-labelledby='email'/>
           <button>Get preview</button>
         </div>
         <div class="flex">
@@ -24,6 +24,8 @@ import ebookSamples from "../images/svg/ebook-samples.svg";
             type="checkbox"
             id="news"
             placeholder="Type your best e-mail to receive a preview..."
+            aria-label="preview"
+            aria-labelledby='preview'
           />
           <label for="news">I agree to receive news</label>
         </div>
