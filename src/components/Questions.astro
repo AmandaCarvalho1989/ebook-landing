@@ -35,13 +35,12 @@ import minusIcon from "../images/svg/minus.svg";
   const toggleAnswer = (index) => {
     const answer = document.getElementById(`answer-${index}`);
     const icon = document.querySelector(`.question-icon-${index}`);
-
    
     if (icon.src.includes('plus')) {
-      icon.src = "/images/minus.svg";
+      icon.src = "../../public/images/minus.svg";
       answer.style.maxHeight = answer.scrollHeight + "px";
     } else {
-      icon.src = "/images/plus.svg";
+      icon.src = "../../public/images/plus.svg";
       answer.style.maxHeight = "0px"; 
     }
   };
