@@ -33,20 +33,15 @@ import minusIcon from "../images/svg/minus.svg";
 <script>
   // @ts-nocheck
   const toggleAnswer = (index) => {
-    const plusIcon = new URL("../images/svg/plus.svg", import.meta.url)
-      .pathname;
-    const minusIcon = new URL("../images/svg/minus.svg", import.meta.url)
-      .pathname;
-
     const answer = document.getElementById(`answer-${index}`);
     const icon = document.querySelector(`.question-icon-${index}`);
 
    
     if (icon.src.includes('plus')) {
-      icon.src = minusIcon;
+      icon.src = "../../public/minus.svg";
       answer.style.maxHeight = answer.scrollHeight + "px";
     } else {
-      icon.src = plusIcon;
+      icon.src = "../../public/plus.svg";
       answer.style.maxHeight = "0px"; 
     }
   };
