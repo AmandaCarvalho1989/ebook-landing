@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import { questions } from "../constants/questions";
 import plusIcon from "../images/svg/plus.svg";
 import minusIcon from "../images/svg/minus.svg";
@@ -31,17 +31,23 @@ import minusIcon from "../images/svg/minus.svg";
 </div>
 
 <script>
-  // @ts-nocheck
+  // @ts-nocheck 
+import { getImage } from "astro:assets";
+import plusIcon from "../images/svg/plus.svg";
+import minusIcon from "../images/svg/minus.svg";
+
+  const plusIconG = await getImage({src: plusIcon})
+  const minusIconG = await getImage({src: minusIcon})
+
   const toggleAnswer = (index) => {
     const answer = document.getElementById(`answer-${index}`);
     const icon = document.querySelector(`.question-icon-${index}`);
-
    
     if (icon.src.includes('plus')) {
-      icon.src = "../../public/minus.svg";
+      icon.src =minusIconG.src;
       answer.style.maxHeight = answer.scrollHeight + "px";
     } else {
-      icon.src = "../../public/plus.svg";
+      icon.src = plusIconG.src;
       answer.style.maxHeight = "0px"; 
     }
   };
