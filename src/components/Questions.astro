@@ -15,11 +15,17 @@ import minusIcon from "../images/svg/minus.svg";
             <button class="toggle-question">
               <Image
                 loading="lazy"
-                id="question-icon"
-                class={`question-icon-${index}`}
-                src={index === 0 ? minusIcon : plusIcon}
+                class={`question-icon question-icon-${index}`}
                 alt="Open answer"
                 width="24"
+                src={plusIcon}
+              />
+              <Image
+                loading="lazy"
+                class={`question-icon question-icon-${index} hidden`}
+                alt="Close answer"
+                width="24"
+                src={minusIcon}
               />
             </button>
           </div>
@@ -31,24 +37,17 @@ import minusIcon from "../images/svg/minus.svg";
 </div>
 
 <script>
-  // @ts-nocheck 
-import { getImage } from "astro:assets";
-import plusIcon from "../images/svg/plus.svg";
-import minusIcon from "../images/svg/minus.svg";
-
-  const plusIconG = await getImage({src: plusIcon})
-  const minusIconG = await getImage({src: minusIcon})
-
+  // @ts-nocheck
   const toggleAnswer = (index) => {
     const answer = document.getElementById(`answer-${index}`);
-    const icon = document.querySelector(`.question-icon-${index}`);
-   
-    if (icon.src.includes('plus')) {
-      icon.src =minusIconG.src;
-      answer.style.maxHeight = answer.scrollHeight + "px";
+    const icons = document.querySelectorAll(`.question-icon-${index}`);
+
+    icons.forEach((icon) => icon.classList.toggle("hidden"));
+
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
     } else {
-      icon.src = plusIconG.src;
-      answer.style.maxHeight = "0px"; 
+      answer.style.maxHeight = answer.scrollHeight + "px";
     }
   };
 
@@ -59,11 +58,8 @@ import minusIcon from "../images/svg/minus.svg";
   });
 
   window.onload = () => {
-    const firstAnswer = document.getElementById('answer-0');
-    if (firstAnswer) {
-      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
-    }
-  };
+    toggleAnswer(0);
+};
 
 </script>
 
@@ -84,18 +80,22 @@ import minusIcon from "../images/svg/minus.svg";
         justify-content: space-between;
       }
 
-      img#question-icon {
+      img.question-icon {
         transition: 0.5s ease-in-out;
+      }
+
+      img.hidden {
+        display: none;
       }
 
       p {
         transition: max-height 0.5s ease-in-out;
-        max-height: auto; 
+        max-height: 0px;
         overflow: hidden;
       }
       &:not(:first-child) p {
         overflow: hidden;
-        max-height: 0px; 
+        max-height: 0px;
         transition: max-height 0.5s ease-in-out;
       }
     }
